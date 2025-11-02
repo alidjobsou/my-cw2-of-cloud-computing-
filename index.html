@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Djobsou Ali | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f9f9fb;
+      --text-color: #222;
+      --card-bg: rgba(255, 255, 255, 0.8);
+      --accent: #0077ff;
+      --header-bg: linear-gradient(135deg, #0077ff, #00c6ff);
+    }
+    body.dark {
+      --bg-color: #0f172a;
+      --text-color: #e2e8f0;
+      --card-bg: rgba(30, 41, 59, 0.8);
+      --accent: #38bdf8;
+      --header-bg: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+    }
+
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--header-bg);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem 4rem;
+      position: relative;
+    }
+    header h1 {font-size: 2.5rem;}
+    header p {opacity: 0.9;}
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-btn:hover {background: rgba(255,255,255,0.4);}
+
+    nav {
+      background: rgba(0,0,0,0.05);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {color: var(--accent);}
+
+    section {max-width: 1100px; margin: 4rem auto; padding: 0 1.5rem;}
+    h2 {text-align: center; margin-bottom: 1rem; color: var(--accent); font-size: 2rem;}
+
+    .about {text-align: center;}
+    .about img {
+      width: 150px; height: 150px; border-radius: 50%;
+      margin-bottom: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .about p {max-width: 700px; margin: 0 auto; font-size: 1.1rem;}
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .card h3 {color: var(--accent); margin-bottom: 0.5rem;}
+
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .project a {color: var(--accent); text-decoration: none;}
+    .project a:hover {text-decoration: underline;}
+
+    form {max-width: 500px; margin: 2rem auto 0;}
+    input, textarea {
+      width: 100%; padding: 0.9rem; margin: 0.5rem 0;
+      border: 1px solid #ccc; border-radius: 8px;
+      background: var(--card-bg); color: var(--text-color);
+    }
+    button {
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 8px;
+      padding: 0.8rem 2rem; cursor: pointer; font-weight: 600;
+      transition: 0.3s;
+    }
+    button:hover {background: #005fcc;}
+
+    footer {
+      text-align: center; padding: 1.5rem; margin-top: 3rem;
+      background: rgba(0,0,0,0.05);
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="toggle-btn" id="modeToggle">🌙 Dark Mode</button>
+    <h1>DJOBSOU ALI</h1>
+    <p>Web Developer | Designer | Innovator</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" />
+    <p>Hello! I’m Djobsou , a passionate web developer focused on crafting smooth, modern, and functional digital experiences. I blend creativity with clean code to build websites that are both beautiful and user-friendly.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>HTML5 & CSS3</h3><p>Building semantic, accessible, and responsive layouts.</p></div>
+      <div class="card"><h3>JavaScript</h3><p>Dynamic front-end functionality with ES6+ features.</p></div>
+      <div class="card"><h3>React.js</h3><p>Creating interactive and scalable web applications.</p></div>
+      <div class="card"><h3>Python</h3><p>Backend scripting, data processing, and automation.</p></div>
+      <div class="card"><h3>UI/UX Design</h3><p>Designing interfaces that combine style and usability.</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1" />
+        <h3>Portfolio Website</h3>
+        <p>A sleek personal portfolio designed to showcase my work, skills, and creativity.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="card project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2" />
+        <h3>Task Tracker</h3>
+        <p>A productivity web app to manage tasks, set reminders, and boost workflow efficiency.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="card project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3" />
+        <h3>Weather Dashboard</h3>
+        <p>Live weather tracking app built with modern APIs and responsive design.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Ali Djobsou — Crafted with ❤️</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Dark/Light toggle
+    const toggleBtn = document.getElementById('modeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const darkMode = document.body.classList.contains('dark');
+      toggleBtn.textContent = darkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+
+    // Contact form alert
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thanks, ${name}! Your message has been sent successfully.`);
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
